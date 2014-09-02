@@ -40,5 +40,6 @@ Debug/
 ipch/
 
 #화일제외
-AlgorithmProject.sdf
-AlgorithmProject.opensdf
+*.sdf
+AlgorithmProject/AlgorithmProject.sdf
+AlgorithmProject/AlgorithmProject.opensdf

@@ -1,9 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Algorithm.cpp" />
+    <ClCompile Include="EntryPoint.cpp">
+      <Filter>엔트리포인트</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm.cpp">
+      <Filter>알고리즘 구현</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\History.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="엔트리포인트">
+      <UniqueIdentifier>{121a8311-e70c-4c59-b79d-94e247b6ffb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="알고리즘 구현">
+      <UniqueIdentifier>{b1cf362f-0c55-404f-9b65-5a71460bb57b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Algorithm.h">
+      <Filter>알고리즘 구현</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
