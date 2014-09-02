@@ -34,3 +34,11 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+#폴더 제외
+Debug/
+ipch/
+
+#화일제외
+.sdf
+.opensdf
