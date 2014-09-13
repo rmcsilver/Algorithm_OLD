@@ -12,6 +12,7 @@ namespace Algorithm
 		{
 			std::cout<<"테스트할 자료형을 선택하세요."<<std::endl;
 			std::cout<<"1 -> 배열(array)"<<std::endl;
+			std::cout<<"2 -> 비트벡터(bitvector)"<<std::endl;
 			std::cout<<"0 -> 종료"<<std::endl;
 			std::cin>>UseType;
 
@@ -52,8 +53,41 @@ namespace Algorithm
 						std::cout<<floatarray[i]<<std::endl;
 
 					std::cout<<"\n"<<std::endl;
-				}
-				break;
+				}break;
+
+			case eBitvector:
+				{
+					std::cout<<"\n2.비트백터선택"<<std::endl;
+					Bitvector bitv(32);
+					
+					bool b;
+					
+					bitv.ClearAll();
+					bitv.SetAll();
+
+					bitv.Set(0, false);
+					b = bitv[0];
+					std::cout<<"0번째 비트 0으로 셋팅 후 -> "<<b<<std::endl;
+
+					bitv.Set(31, false);
+					b = bitv[31];
+					std::cout<<"31번째 비트 0으로 셋팅 후 -> "<<b<<std::endl;
+
+					bitv.Set(0, true);
+					b = bitv[0];
+					std::cout<<"0번째 비트 1로 셋팅 후 -> "<<b<<std::endl;
+
+		//			bitv.Resize(48);
+
+					int size = bitv.Size();
+
+					for(int i = 0; i < 32; i++)
+					{
+						std::cout<<bitv[i]<<std::endl;
+					}
+					std::cout<<"\n"<<std::endl;
+				}break;
+
 			default:
 				{
 					std::cout<<"\n잘못된 입력입니다.\n"<<std::endl;
