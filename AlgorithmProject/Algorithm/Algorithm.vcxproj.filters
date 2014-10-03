@@ -18,10 +18,25 @@
     <Filter Include="알고리즘 구현">
       <UniqueIdentifier>{b1cf362f-0c55-404f-9b65-5a71460bb57b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="자료구조">
+      <UniqueIdentifier>{e119a201-2285-4b36-a0b2-eeef1de017c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="정렬">
+      <UniqueIdentifier>{8a76eea1-6275-4770-b3d6-a9079e8c2319}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithm.h">
       <Filter>알고리즘 구현</Filter>
+    </ClInclude>
+    <ClInclude Include="array.h">
+      <Filter>자료구조</Filter>
+    </ClInclude>
+    <ClInclude Include="bitvector.h">
+      <Filter>자료구조</Filter>
+    </ClInclude>
+    <ClInclude Include="sort.h">
+      <Filter>정렬</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

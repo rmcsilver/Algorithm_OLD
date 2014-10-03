@@ -1,6 +1,11 @@
 #include <Windows.h>
 #include <iostream>
+#include <vector>
+
 #include "Algorithm.h"
+#include "array.h"
+#include "bitvector.h"
+
 
 namespace Algorithm
 {
@@ -13,6 +18,7 @@ namespace Algorithm
 			std::cout<<"테스트할 자료형을 선택하세요."<<std::endl;
 			std::cout<<"1 -> 배열(array)"<<std::endl;
 			std::cout<<"2 -> 비트벡터(bitvector)"<<std::endl;
+			std::cout<<"3 -> 퀵소트(quicksort)"<<std::endl;
 			std::cout<<"0 -> 종료"<<std::endl;
 			std::cin>>UseType;
 
@@ -86,6 +92,11 @@ namespace Algorithm
 						std::cout<<bitv[i]<<std::endl;
 					}
 					std::cout<<"\n"<<std::endl;
+				}break;
+
+			case eQuickSort:
+				{
+
 				}break;
 
 			default:
