@@ -1,14 +1,31 @@
-#include <Windows.h>
-#include <iostream>
-#include <vector>
-
 #include "Algorithm.h"
-#include "array.h"
-#include "bitvector.h"
-
 
 namespace Algorithm
 {
+	// compare integers
+	int compareint( int l, int r )
+	{
+		return l - r;
+	}
+
+
+	// compare the integers in reverse order
+	int compareintreverse( int l, int r )
+	{
+		return r - l;
+	}
+
+
+	// compare floats
+	int comparefloat( float l, float r )
+	{
+		if( l < r )
+			return -1;
+		if( l > r )
+			return 1;
+		return 0;
+	}
+
 	int Run()
 	{
 		int UseType = 1;
@@ -96,6 +113,43 @@ namespace Algorithm
 
 			case eQuickSort:
 				{
+					Array<int> iarray( 16 );
+					Array<float> farray( 16 );
+
+					int index;
+
+					// seed the randomizer, see Chapter 22.
+					srand( time(0) );
+
+					// fill up the arrays with random values
+					for( index = 0; index < 16; index++ )
+					{
+						// 0-255
+						iarray[index] = rand() % 256;
+
+						// 0-1
+						farray[index] = (float)(rand() % 256) / 256.0f;
+					}
+
+
+					QuickSort( iarray, 0, 16, compareint );
+					QuickSort( farray, 0, 16, comparefloat );
+
+					std::cout << "Integer Array: ";
+					PrintArray( iarray );
+					std::cout << std::endl;
+
+					std::cout << "Float Array: ";
+					PrintArray( farray );
+					std::cout << std::endl;
+
+
+					// reverse the integer array
+					QuickSort( iarray, 0, 16, compareintreverse );
+
+					std::cout << "Integer Array Reversed: ";
+					PrintArray( iarray );
+					std::cout << std::endl;
 
 				}break;
 

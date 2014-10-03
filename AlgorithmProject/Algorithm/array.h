@@ -1,3 +1,7 @@
+#pragma once
+
+#include <stdio.h>
+
 template<class T>
 class Array
 {
