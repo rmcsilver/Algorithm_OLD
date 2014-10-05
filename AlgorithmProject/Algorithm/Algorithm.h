@@ -9,6 +9,7 @@
 #include "array.h"
 #include "bitvector.h"
 #include "sort.h"
+#include "Queue.h"
 
 namespace Algorithm
 {
@@ -17,6 +18,7 @@ namespace Algorithm
 		eArray = 1,
 		eBitvector,
 		eQuickSort,
+		eCircularQueue,
 		eArray2D,
 		eArray3D,
 		eMax
@@ -31,6 +33,19 @@ namespace Algorithm
 		{
 			std::cout << p_array[index] << ", ";
 		}
+		std::cout << std::endl;
+	}
+
+	template<class T>
+	void PrintCircularQueue( CircularQueue<T>& _queue )
+	{
+		int index;
+
+		for( index = 0; index < _queue.Count(); index++ )
+		{
+			std::cout << _queue[index] << ", ";
+		}
+		std::cout << std::endl;
 	}
 
 	int Run();

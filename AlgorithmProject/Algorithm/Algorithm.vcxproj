@@ -84,6 +84,7 @@
     <ClInclude Include="Algorithm.h" />
     <ClInclude Include="array.h" />
     <ClInclude Include="bitvector.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

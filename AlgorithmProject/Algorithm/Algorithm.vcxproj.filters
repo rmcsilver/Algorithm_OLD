@@ -38,5 +38,8 @@
     <ClInclude Include="sort.h">
       <Filter>정렬</Filter>
     </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>자료구조</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

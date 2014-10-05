@@ -36,6 +36,7 @@ namespace Algorithm
 			std::cout<<"1 -> 배열(array)"<<std::endl;
 			std::cout<<"2 -> 비트벡터(bitvector)"<<std::endl;
 			std::cout<<"3 -> 퀵소트(quicksort)"<<std::endl;
+			std::cout<<"4 -> 서큘러큐(circularqueue)"<<std::endl;
 			std::cout<<"0 -> 종료"<<std::endl;
 			std::cin>>UseType;
 
@@ -153,6 +154,26 @@ namespace Algorithm
 
 				}break;
 
+			case eCircularQueue:
+				{
+					CircularQueue<int> queue(5);
+
+					std::cout << "Enqueue(5)" << std::endl;
+					queue.Enqueue(5); 
+					std::cout << "Enqueue(15)" << std::endl;
+					queue.Enqueue(15); 
+					std::cout << "Enqueue(376)" << std::endl;
+					queue.Enqueue(376); 
+					std::cout << "Enqueue(512)" << std::endl;
+					queue.Enqueue(512); 
+					PrintCircularQueue(queue);
+					std::cout << "Dequeue()" << std::endl;
+					queue.Dequeue(); 
+					std::cout << "Dequeue()" << std::endl;
+					queue.Dequeue(); 
+					PrintCircularQueue(queue);
+
+				}break;
 			default:
 				{
 					std::cout<<"\n잘못된 입력입니다.\n"<<std::endl;
