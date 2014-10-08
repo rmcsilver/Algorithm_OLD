@@ -116,7 +116,10 @@ namespace Algorithm
 				{
 					Array<int> iarray( 16 );
 					Array<float> farray( 16 );
-
+					
+					std::vector<int> data;
+					data.reserve(16);
+					
 					int index;
 
 					// seed the randomizer, see Chapter 22.
@@ -130,11 +133,14 @@ namespace Algorithm
 
 						// 0-1
 						farray[index] = (float)(rand() % 256) / 256.0f;
+
+						data.push_back(rand() % 256);
 					}
-
-
+					
 					QuickSort( iarray, 0, 16, compareint );
 					QuickSort( farray, 0, 16, comparefloat );
+	//				SortLib::QSort(data);
+					SortLib::QSort(data, SortOrder::Descending_Order);
 
 					std::cout << "Integer Array: ";
 					PrintArray( iarray );
@@ -144,6 +150,9 @@ namespace Algorithm
 					PrintArray( farray );
 					std::cout << std::endl;
 
+					std::cout << "Integer Vector: ";
+					PrintVector( data );
+					std::cout << std::endl;
 
 					// reverse the integer array
 					QuickSort( iarray, 0, 16, compareintreverse );
@@ -165,6 +174,7 @@ namespace Algorithm
 					std::cout << "Enqueue(376)" << std::endl;
 					queue.Enqueue(376); 
 					std::cout << "Enqueue(512)" << std::endl;
+					std::cout << "Enqueue[0] : " << queue[0] << std::endl;
 					queue.Enqueue(512); 
 					PrintCircularQueue(queue);
 					std::cout << "Dequeue()" << std::endl;

@@ -48,5 +48,17 @@ namespace Algorithm
 		std::cout << std::endl;
 	}
 
+	template<class T>
+	void PrintVector( std::vector<T>& _data )
+	{
+		std::vector<T>::iterator iter;
+
+		for( iter = _data.begin(); iter != _data.end(); ++iter )
+		{
+			std::cout << (*iter) << ", ";
+		}
+		std::cout << std::endl;
+
+	}
 	int Run();
 }
